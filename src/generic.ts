@@ -28,3 +28,9 @@ const players: GenericArray<{ name: string; status: "Playing" | "Retired" }> = [
   },
 ];
 console.log(players);
+
+// tuple
+type GenericTuple<X, Y> = [X, Y];
+
+// example of tuple
+const person: GenericTuple<string, string> = ["Mr. X", "Mrs. Y"];
