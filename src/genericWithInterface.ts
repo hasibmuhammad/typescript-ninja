@@ -1,4 +1,4 @@
-interface Developer<T, X> {
+interface Developer<T, X = null> {
   name: string;
   computer: {
     brand: string;
@@ -22,7 +22,7 @@ interface Bike {
   model: string;
 }
 
-const tsDeveloper1: Developer<SmartWatch, null> = {
+const tsDeveloper1: Developer<SmartWatch> = {
   name: "Hasib",
   computer: {
     brand: "Lenovo",
