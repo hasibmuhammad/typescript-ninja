@@ -34,3 +34,8 @@ type GenericTuple<X, Y> = [X, Y];
 
 // example of tuple
 const person: GenericTuple<string, string> = ["Mr. X", "Mrs. Y"];
+
+const userWithId: GenericTuple<number, { name: string; email: string }> = [
+  133,
+  { name: "shuvo", email: "shuvo@gmail.com" },
+];
