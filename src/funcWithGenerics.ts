@@ -30,3 +30,42 @@ const student2 = addCourseToStudent({
 });
 
 console.log(student1, student2);
+
+// more exaples
+const addPerson = <
+  T extends {
+    name: string;
+    age: number;
+    hasSmartWatch?: boolean;
+    isActive?: boolean;
+  }
+>(
+  attriutes: T
+) => {
+  return {
+    ...attriutes,
+  };
+};
+
+const person1 = addPerson({ name: "Akash", age: 20, hasSmartWatch: true });
+const person2 = addPerson({
+  name: "Mahmud",
+  age: 30,
+  hasSmartWatch: false,
+  isActive: false,
+});
+
+console.log(person1, person2);
+
+const newUsers = {
+  name: "shuvo",
+  age: 22,
+};
+
+const addUser = <X, Y extends keyof X>(users: X, key: Y) => {
+  return users[key];
+};
+
+const newUser1 = addUser(newUsers, "name");
+
+console.log(newUser1);
