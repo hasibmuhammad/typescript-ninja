@@ -5,6 +5,7 @@ type Employee = {
     state?: string;
   };
 };
+
 const getEmployeeCity = (employee: Employee): string | undefined => {
   return employee?.address?.city;
 };
